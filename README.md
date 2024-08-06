@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+Todolist instrucation:-
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1.created react app and install nessesery dependecy.
+2.for created two  folder first is compoenents there we will mange our all components and second is redux where we will manange our all state's globlly.
+3.in redux I have created three files one is for action where we can write all action, second is reducer where we can handle the logics . basically we dispatch the actions and accesss it in reuducer , in reducer according to the condition we return a new update state and this new update state will reflect in our component , for dispatch action we have useDispacth function provided and for get the all states we have useSelector function both are provided by the react-redux.
 
-## Available Scripts
+4.now we can see have have TaskReducer we have getting the action as a perameter and returing the result according to the acition.type also we have defined our all actions in action.js
 
-In the project directory, you can run:
+5.our third file is store.js basically store  is our glbole obj in this obj we manage our the states . We have export this from here store.js and imported in index.js . in index. js we wrapped the whole app compoent in provider  and pass  this store obj as a props.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6.In Today component First I have created input box and add task button . on addTask function we are trigger a action and sending payload as a arguemnt.it will add the task in our task with unqiue id.
+delete task- we are getting the id as payload and deleteing the item which we not needed.using filter function.
+edit task- We are getting the id as payload and upading the text in the state.
+toggle_fevorite- we have created a fevorite status for every items . according to our logic click on star icon it's do the fevorite status true and false . and according to this true/false statement we are updating our icons.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+toggle_todo:- in list items we have added a checkbox with every item when it's be check then it's sets the complete status true otherwise it's false.
 
-### `npm test`
+according to completed:true/false statement we are can difference task which is completed and which is not completed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+for better managemangement I have made a differenet component for popup model. in my code we can see i am getting the nessery state or function as a props and manging it in different compoenent. basically this model component will pop up when we want to update task and in this model we have two buttons first for cancel the change and second one for save . when we click on save button it call the handleupdatetask function and in this function we are dispatching an action "Edit task" for edit.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+We have two list in our app one is for todo list task and second is  completed tasks. we are finding the different between by the "completed" true or false.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+I did not focus on ui part just focud on functionally  . althorugh I have good experieces and knowledage in UI.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Thanks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
